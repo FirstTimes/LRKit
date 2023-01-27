@@ -1,0 +1,6 @@
+framework module Pods_LRKitTests {
+  umbrella header "Pods-LRKitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

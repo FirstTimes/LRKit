@@ -7,7 +7,25 @@
 		<key>LRKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C4CD4C1C26A90D0900F7DF43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4CD4C3726A90D0C00F7DF43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4CD4C4226A90D0C00F7DF43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

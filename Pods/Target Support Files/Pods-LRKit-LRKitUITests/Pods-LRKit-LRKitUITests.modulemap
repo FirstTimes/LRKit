@@ -1,0 +1,6 @@
+framework module Pods_LRKit_LRKitUITests {
+  umbrella header "Pods-LRKit-LRKitUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
