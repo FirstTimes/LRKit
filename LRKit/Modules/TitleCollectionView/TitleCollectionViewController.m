@@ -36,7 +36,7 @@
 #pragma mark - configure
 
 - (void)initProperties {
-    self.titleArray = @[@"你好", @"你从哪里来", @"你要到哪里去", @"你吃过了吗", @"你住在什么地方", @"中午有空吗", @"加个微信呗"];
+    self.titleArray = @[@"你好", @"你从哪里来呀", @"你要到哪里去", @"你吃过了吗", @"你住在什么地方啊", @"中午有空吗", @"加个微信呗"];
 }
 
 - (void)configureViews {
