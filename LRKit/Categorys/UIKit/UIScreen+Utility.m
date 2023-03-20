@@ -50,7 +50,15 @@
 }
 
 + (CGFloat)statusAndNavigationBarHeight {
-    return [self isNormalScreen] ? 64.f : 88.f;
+    CGFloat statusBarHeight = 0;
+    if (@available(iOS 13.0, *)) {
+        UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
+        statusBarHeight = window.safeAreaInsets.top ?: 20.f;
+    } else {
+        statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+    
+    return [self navigationBarHeight] + statusBarHeight;
 }
 
 + (CGFloat)tabBarHeight {

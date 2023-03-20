@@ -29,6 +29,8 @@
 - (void)initProperties {
     self.exampleArray = @[@{@"type":@"TitleCollectionView"},
                           @{@"type":@"Test"}];
+    
+    NSLog(@"%f", [UIScreen statusAndNavigationBarHeight]);
 }
 
 - (void)configureViews {
