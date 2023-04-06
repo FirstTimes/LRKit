@@ -7,6 +7,7 @@
 
 #import "LRMainViewController.h"
 #import "TitleCollectionViewController.h"
+#import "LRWebViewController.h"
 #import "TestViewController.h"
 
 @interface LRMainViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -28,9 +29,8 @@
 
 - (void)initProperties {
     self.exampleArray = @[@{@"type":@"TitleCollectionView"},
+                          @{@"type":@"LRWebViewController"},
                           @{@"type":@"Test"}];
-    
-    NSLog(@"%f", [UIScreen statusAndNavigationBarHeight]);
 }
 
 - (void)configureViews {
@@ -90,6 +90,12 @@
     if ([type isEqualToString:@"TitleCollectionView"]) {
         TitleCollectionViewController *titleCollectionView = [[TitleCollectionViewController alloc] init];
         [self.navigationController pushViewController:titleCollectionView animated:YES];
+        
+    } else if ([type isEqualToString:@"LRWebViewController"]) {
+        LRWebViewController *webViewController = [[LRWebViewController alloc] init];
+        webViewController.urlString = @"https://www.baidu.com";
+        [self.navigationController pushViewController:webViewController animated:YES];
+        
     } else if ([type isEqualToString:@"Test"]) {
         TestViewController *testViewController = [[TestViewController alloc] init];
         [self.navigationController pushViewController:testViewController animated:YES];

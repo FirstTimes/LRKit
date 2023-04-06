@@ -11,6 +11,9 @@
 		B6B72277D1D7913278BA654C /* Pods_LRKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1888C94D958A1C4270652D08 /* Pods_LRKitTests.framework */; };
 		C405050226B9252D0087898E /* UIScreen+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C405050126B9252D0087898E /* UIScreen+Utility.m */; };
 		C405050E26B92D9A0087898E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C405050C26B92D990087898E /* main.m */; };
+		C427742B29DC1D8200E1B51F /* LRWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C427742A29DC1D8200E1B51F /* LRWeakScriptMessageDelegate.m */; };
+		C427742E29DC1EE100E1B51F /* LRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C427742D29DC1EE100E1B51F /* LRWebViewController.m */; };
+		C427743129DC2E0500E1B51F /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C427743029DC2E0500E1B51F /* UIImage+Utility.m */; };
 		C44BE8AC27D9F87C001D480C /* LRConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C44BE8AB27D9F87C001D480C /* LRConfig.m */; };
 		C44BE8B127D9FA76001D480C /* LRSuspensionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C44BE8B027D9FA76001D480C /* LRSuspensionWindow.m */; };
 		C44BE8B527D9FAB6001D480C /* EnvironmentChangeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C44BE8B427D9FAB6001D480C /* EnvironmentChangeHelper.m */; };
@@ -75,6 +78,12 @@
 		C405050126B9252D0087898E /* UIScreen+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Utility.m"; sourceTree = "<group>"; };
 		C405050B26B92D990087898E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C405050C26B92D990087898E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C427742929DC1D8200E1B51F /* LRWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		C427742A29DC1D8200E1B51F /* LRWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		C427742C29DC1EE100E1B51F /* LRWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRWebViewController.h; sourceTree = "<group>"; };
+		C427742D29DC1EE100E1B51F /* LRWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRWebViewController.m; sourceTree = "<group>"; };
+		C427742F29DC2E0500E1B51F /* UIImage+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
+		C427743029DC2E0500E1B51F /* UIImage+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
 		C44BE8AB27D9F87C001D480C /* LRConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRConfig.m; sourceTree = "<group>"; };
 		C44BE8AD27D9F88E001D480C /* LRConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRConfig.h; sourceTree = "<group>"; };
 		C44BE8AF27D9FA76001D480C /* LRSuspensionWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSuspensionWindow.h; sourceTree = "<group>"; };
@@ -218,6 +227,8 @@
 				C4C8CB4E278D1C2800AFE643 /* UINavigationController+Utility.m */,
 				C46A7CD2284E07F700017E8C /* UITextField+Utility.h */,
 				C46A7CD3284E07F700017E8C /* UITextField+Utility.m */,
+				C427742F29DC2E0500E1B51F /* UIImage+Utility.h */,
+				C427743029DC2E0500E1B51F /* UIImage+Utility.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -240,6 +251,17 @@
 				C405050C26B92D990087898E /* main.m */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C415777929DBFA7A0030D1BD /* LRWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C427742929DC1D8200E1B51F /* LRWeakScriptMessageDelegate.h */,
+				C427742A29DC1D8200E1B51F /* LRWeakScriptMessageDelegate.m */,
+				C427742C29DC1EE100E1B51F /* LRWebViewController.h */,
+				C427742D29DC1EE100E1B51F /* LRWebViewController.m */,
+			);
+			path = LRWebViewController;
 			sourceTree = "<group>";
 		};
 		C44BE8AA27D9F739001D480C /* LRConfig */ = {
@@ -341,6 +363,7 @@
 		C4B4B4462795AF4B00A736AE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C415777929DBFA7A0030D1BD /* LRWebViewController */,
 				C454EDE6296AC8BC00207A91 /* LRConstraint */,
 				C44BE8B227D9FA8D001D480C /* EnvironmentChangeHelper */,
 				C4B4B4472795AF7B00A736AE /* LRDeviceHelper */,
@@ -743,6 +766,7 @@
 				C405050226B9252D0087898E /* UIScreen+Utility.m in Sources */,
 				C48292BF272FF3060001A522 /* UIColor+Utility.m in Sources */,
 				C46A7CCD2848ADC000017E8C /* LRCountDownButton.m in Sources */,
+				C427743129DC2E0500E1B51F /* UIImage+Utility.m in Sources */,
 				C44BE8B827DA00B2001D480C /* AppDelegate+Configure.m in Sources */,
 				C4907A4B274F950E000E068C /* CAGradientLayer+Utility.m in Sources */,
 				C4CD4C6D26A91F8400F7DF43 /* LRMainViewController.m in Sources */,
@@ -758,10 +782,12 @@
 				C44BE8B127D9FA76001D480C /* LRSuspensionWindow.m in Sources */,
 				C4907A572750BAFC000E068C /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				C4B4B47D27B40F6800A736AE /* NSDecimalNumber+Utility.m in Sources */,
+				C427742B29DC1D8200E1B51F /* LRWeakScriptMessageDelegate.m in Sources */,
 				C44BE8B527D9FAB6001D480C /* EnvironmentChangeHelper.m in Sources */,
 				C4861AE0287596B4009873F2 /* UIApplication+Utility.m in Sources */,
 				C44BE93C27E5FCBE001D480C /* LRAlignmentLabel.m in Sources */,
 				C4B4B44A2795AFA500A736AE /* LRDeviceHelper.m in Sources */,
+				C427742E29DC1EE100E1B51F /* LRWebViewController.m in Sources */,
 				C44BE8AC27D9F87C001D480C /* LRConfig.m in Sources */,
 				C4CD4C6226A91B0C00F7DF43 /* LRBaseViewController.m in Sources */,
 				C4C8CB4C278C3C8600AFE643 /* TestViewController.m in Sources */,
