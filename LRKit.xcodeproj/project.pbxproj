@@ -40,6 +40,8 @@
 		C4BCCF6129DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF5B29DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m */; };
 		C4BCCF6229DED6ED0024431A /* LRChoosePhotoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF5F29DED6ED0024431A /* LRChoosePhotoHelper.m */; };
 		C4BCCF6329DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF6029DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m */; };
+		C4BCCF6729E0150A0024431A /* LRPickerSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF6629E0150A0024431A /* LRPickerSelectView.m */; };
+		C4BCCF6B29E0177D0024431A /* LRTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF6A29E0177D0024431A /* LRTextInputView.m */; };
 		C4C8CB402786E70F00AFE643 /* TitleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C8CB3F2786E70F00AFE643 /* TitleCollectionViewController.m */; };
 		C4C8CB4927884E6F00AFE643 /* LRBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C8CB4827884E6F00AFE643 /* LRBaseNavigationController.m */; };
 		C4C8CB4C278C3C8600AFE643 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C8CB4B278C3C8600AFE643 /* TestViewController.m */; };
@@ -140,6 +142,10 @@
 		C4BCCF5E29DED6ED0024431A /* LRChoosePhotoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRChoosePhotoHelper.h; sourceTree = "<group>"; };
 		C4BCCF5F29DED6ED0024431A /* LRChoosePhotoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRChoosePhotoHelper.m; sourceTree = "<group>"; };
 		C4BCCF6029DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRChoosePhotoHelper+AlbumSource.m"; sourceTree = "<group>"; };
+		C4BCCF6529E0150A0024431A /* LRPickerSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPickerSelectView.h; sourceTree = "<group>"; };
+		C4BCCF6629E0150A0024431A /* LRPickerSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPickerSelectView.m; sourceTree = "<group>"; };
+		C4BCCF6929E0177D0024431A /* LRTextInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTextInputView.h; sourceTree = "<group>"; };
+		C4BCCF6A29E0177D0024431A /* LRTextInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRTextInputView.m; sourceTree = "<group>"; };
 		C4C8CB3E2786E70F00AFE643 /* TitleCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleCollectionViewController.h; sourceTree = "<group>"; };
 		C4C8CB3F2786E70F00AFE643 /* TitleCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleCollectionViewController.m; sourceTree = "<group>"; };
 		C4C8CB412786EB4C00AFE643 /* LRKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRKit.pch; sourceTree = "<group>"; };
@@ -342,6 +348,8 @@
 		C4907A522750BA69000E068C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C4BCCF6829E017000024431A /* LRTextInputView */,
+				C4BCCF6429E014920024431A /* LRPickerSelectView */,
 				C4BCCF5629DECFAB0024431A /* LRChoosePhotoView */,
 				C46A7CCA2848AD4800017E8C /* LRCountDownButton */,
 				C46A7CD5284F352400017E8C /* LRMarginLabel */,
@@ -414,6 +422,24 @@
 				C4BCCF5B29DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m */,
 			);
 			path = LRChoosePhotoHelper;
+			sourceTree = "<group>";
+		};
+		C4BCCF6429E014920024431A /* LRPickerSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				C4BCCF6529E0150A0024431A /* LRPickerSelectView.h */,
+				C4BCCF6629E0150A0024431A /* LRPickerSelectView.m */,
+			);
+			path = LRPickerSelectView;
+			sourceTree = "<group>";
+		};
+		C4BCCF6829E017000024431A /* LRTextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				C4BCCF6929E0177D0024431A /* LRTextInputView.h */,
+				C4BCCF6A29E0177D0024431A /* LRTextInputView.m */,
+			);
+			path = LRTextInputView;
 			sourceTree = "<group>";
 		};
 		C4C8CB3D2786E49B00AFE643 /* TitleCollectionView */ = {
@@ -800,6 +826,7 @@
 			files = (
 				C4BCCF6329DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m in Sources */,
 				C4C8CB4F278D1C2800AFE643 /* UINavigationController+Utility.m in Sources */,
+				C4BCCF6729E0150A0024431A /* LRPickerSelectView.m in Sources */,
 				C4BCCF5A29DED2F90024431A /* LRChoosePhotoView.m in Sources */,
 				C405050226B9252D0087898E /* UIScreen+Utility.m in Sources */,
 				C48292BF272FF3060001A522 /* UIColor+Utility.m in Sources */,
@@ -807,6 +834,7 @@
 				C427743129DC2E0500E1B51F /* UIImage+Utility.m in Sources */,
 				C44BE8B827DA00B2001D480C /* AppDelegate+Configure.m in Sources */,
 				C4907A4B274F950E000E068C /* CAGradientLayer+Utility.m in Sources */,
+				C4BCCF6B29E0177D0024431A /* LRTextInputView.m in Sources */,
 				C4CD4C6D26A91F8400F7DF43 /* LRMainViewController.m in Sources */,
 				C4C8CB4927884E6F00AFE643 /* LRBaseNavigationController.m in Sources */,
 				C454EDE9296AC8FC00207A91 /* LRConstraint.m in Sources */,
