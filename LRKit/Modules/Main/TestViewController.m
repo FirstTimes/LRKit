@@ -12,8 +12,13 @@
 #import "LRDeviceHelper.h"
 #import "UITextField+Utility.h"
 #import "NSString+Utility.h"
+#import "LRChoosePhotoHelper.h"
+#import "LRChoosePhotoView.h"
+#import "UIImage+Utility.h"
 
 @interface TestViewController () <UITextFieldDelegate>
+
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -24,31 +29,43 @@
     self.view.backgroundColor = [UIColor randomColor];
     self.navigationItem.title = @"测试";
     
-    LRAlignmentLabel *alignmentLabel = [[LRAlignmentLabel alloc] init];
-    alignmentLabel.text = @"菲菲姐副机位副机位IT我无附件为if降温if副机位副机位if我机服务费今晚if交付物if降温我瑞几覅全家福你无法叫我覅违反";
-    alignmentLabel.backgroundColor = [UIColor purpleColor];
-    alignmentLabel.numberOfLines = 0;
-    alignmentLabel.verticalAlignment = LRVerticalAlignmentBottom;
-    [self.view addSubview:alignmentLabel];
-    [alignmentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//    LRAlignmentLabel *alignmentLabel = [[LRAlignmentLabel alloc] init];
+//    alignmentLabel.text = @"菲菲姐副机位副机位IT我无附件为if降温if副机位副机位if我机服务费今晚if交付物if降温我瑞几覅全家福你无法叫我覅违反";
+//    alignmentLabel.backgroundColor = [UIColor purpleColor];
+//    alignmentLabel.numberOfLines = 0;
+//    alignmentLabel.verticalAlignment = LRVerticalAlignmentBottom;
+//    [self.view addSubview:alignmentLabel];
+//    [alignmentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(300);
+//        make.left.mas_equalTo(50);
+//        make.right.mas_equalTo(-50);
+//        make.height.mas_equalTo(180);
+//    }];
+//
+//    LRMarginLabel *marginLabel = [[LRMarginLabel alloc] init];
+//    marginLabel.text = @"菲菲姐副机位副机位我无附件为降温副机位副机位我机服务费今晚交付物降温我瑞几覅全家福你无法叫我覅违反";
+//    marginLabel.backgroundColor = [UIColor greenColor];
+//    marginLabel.numberOfLines = 0;
+//    marginLabel.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
+//    [self.view addSubview:marginLabel];
+//    [marginLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(500);
+//        make.left.mas_equalTo(50);
+//        make.right.mas_equalTo(-50);
+//        make.height.mas_equalTo(100);
+//    }];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.backgroundColor = [UIColor whiteColor];
+    imageView.image = [UIImage backBlackImage];
+    [self.view addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(300);
         make.left.mas_equalTo(50);
         make.right.mas_equalTo(-50);
         make.height.mas_equalTo(180);
     }];
-    
-    LRMarginLabel *marginLabel = [[LRMarginLabel alloc] init];
-    marginLabel.text = @"菲菲姐副机位副机位我无附件为降温副机位副机位我机服务费今晚交付物降温我瑞几覅全家福你无法叫我覅违反";
-    marginLabel.backgroundColor = [UIColor greenColor];
-    marginLabel.numberOfLines = 0;
-    marginLabel.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    [self.view addSubview:marginLabel];
-    [marginLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(500);
-        make.left.mas_equalTo(50);
-        make.right.mas_equalTo(-50);
-        make.height.mas_equalTo(100);
-    }];
+    self.imageView = imageView;
     
     UITextField *textField = [[UITextField alloc] init];
     textField.backgroundColor = [UIColor whiteColor];
@@ -120,9 +137,36 @@
 }
 
 - (void)pushToA {
-    TestViewController *testA = [TestViewController new];
-    testA.title = @"A";
-    [self.navigationController pushViewController:testA animated:YES];
+//    TestViewController *testA = [TestViewController new];
+//    testA.title = @"A";
+//    [self.navigationController pushViewController:testA animated:YES];
+    NSArray *titleArray = @[@"拍照", @"从手机相册选择"];
+    LRChoosePhotoView *choosePhotoView = [[LRChoosePhotoView alloc] initWithTitleArray:titleArray];
+    [choosePhotoView show];
+    __weak typeof (LRChoosePhotoView) *weakChoosePhotoView = choosePhotoView;
+    choosePhotoView.choosePhotoBlock = ^(LRChoosePhotoWayType choosePhotoWayType) {
+        switch (choosePhotoWayType) {
+            case LRChoosePhotoWayTypeCamera:{
+                [LRChoosePhotoHelper chooseFromCameraOnViewController:self allowEdit:NO completion:^(UIImage * _Nonnull image) {
+                    NSLog(@"%@",image);
+                }];
+                [weakChoosePhotoView dismiss];
+            }
+                break;
+                
+            case LRChoosePhotoWayTypeAlbum: {
+                [LRChoosePhotoHelper chooseFromAlbumOnViewController:self maxCount:1 completion:^(NSArray<UIImage *> * _Nonnull images) {
+                    UIImage *image = [images firstObject];
+                    UIImage *rotationImage = [image rotationImage:image withOrientation:UIImageOrientationRight];
+                    self.imageView.image = rotationImage;
+                    NSLog(@"%@",images);
+                }];
+                [weakChoosePhotoView dismiss];
+            }
+                break;
+        }
+    };
+    
 }
 
 - (void)pushToB {

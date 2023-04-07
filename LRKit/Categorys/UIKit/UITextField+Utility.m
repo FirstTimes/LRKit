@@ -67,4 +67,14 @@
     }
 }
 
++ (BOOL)textfieldPermitMaxLength:(NSInteger)maxLength shouldChangeCharactersInRange:(NSRange)range string:(NSString *)string textField:(UITextField *)textField {
+    NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+
+       if (toBeString.length > maxLength && range.length != 1){
+           textField.text = [toBeString substringToIndex:maxLength];
+           return NO;
+       }
+       return YES;
+}
+
 @end

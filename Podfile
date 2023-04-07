@@ -6,7 +6,8 @@ target 'LRKit' do
   use_frameworks!
 
   # Pods for LRKit
-  pod 'Masonry'
+  pod 'Masonry', '~> 1.1.0'
+  pod 'TZImagePickerController', '~> 3.6.6'
 
   target 'LRKitTests' do
     inherit! :search_paths

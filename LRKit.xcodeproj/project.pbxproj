@@ -36,6 +36,10 @@
 		C4907A5A2754A30B000E068C /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4907A592754A30B000E068C /* UILabel+VerticalAlignment.m */; };
 		C4B4B44A2795AFA500A736AE /* LRDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B4B4492795AFA500A736AE /* LRDeviceHelper.m */; };
 		C4B4B47D27B40F6800A736AE /* NSDecimalNumber+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B4B47C27B40F6700A736AE /* NSDecimalNumber+Utility.m */; };
+		C4BCCF5A29DED2F90024431A /* LRChoosePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF5929DED2F90024431A /* LRChoosePhotoView.m */; };
+		C4BCCF6129DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF5B29DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m */; };
+		C4BCCF6229DED6ED0024431A /* LRChoosePhotoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF5F29DED6ED0024431A /* LRChoosePhotoHelper.m */; };
+		C4BCCF6329DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BCCF6029DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m */; };
 		C4C8CB402786E70F00AFE643 /* TitleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C8CB3F2786E70F00AFE643 /* TitleCollectionViewController.m */; };
 		C4C8CB4927884E6F00AFE643 /* LRBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C8CB4827884E6F00AFE643 /* LRBaseNavigationController.m */; };
 		C4C8CB4C278C3C8600AFE643 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C8CB4B278C3C8600AFE643 /* TestViewController.m */; };
@@ -128,6 +132,14 @@
 		C4B4B4492795AFA500A736AE /* LRDeviceHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRDeviceHelper.m; sourceTree = "<group>"; };
 		C4B4B47B27B40F6700A736AE /* NSDecimalNumber+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Utility.h"; sourceTree = "<group>"; };
 		C4B4B47C27B40F6700A736AE /* NSDecimalNumber+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Utility.m"; sourceTree = "<group>"; };
+		C4BCCF5829DED2F90024431A /* LRChoosePhotoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRChoosePhotoView.h; sourceTree = "<group>"; };
+		C4BCCF5929DED2F90024431A /* LRChoosePhotoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRChoosePhotoView.m; sourceTree = "<group>"; };
+		C4BCCF5B29DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRChoosePhotoHelper+CameraSource.m"; sourceTree = "<group>"; };
+		C4BCCF5C29DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRChoosePhotoHelper+AlbumSource.h"; sourceTree = "<group>"; };
+		C4BCCF5D29DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRChoosePhotoHelper+CameraSource.h"; sourceTree = "<group>"; };
+		C4BCCF5E29DED6ED0024431A /* LRChoosePhotoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRChoosePhotoHelper.h; sourceTree = "<group>"; };
+		C4BCCF5F29DED6ED0024431A /* LRChoosePhotoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRChoosePhotoHelper.m; sourceTree = "<group>"; };
+		C4BCCF6029DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRChoosePhotoHelper+AlbumSource.m"; sourceTree = "<group>"; };
 		C4C8CB3E2786E70F00AFE643 /* TitleCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleCollectionViewController.h; sourceTree = "<group>"; };
 		C4C8CB3F2786E70F00AFE643 /* TitleCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleCollectionViewController.m; sourceTree = "<group>"; };
 		C4C8CB412786EB4C00AFE643 /* LRKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRKit.pch; sourceTree = "<group>"; };
@@ -330,6 +342,7 @@
 		C4907A522750BA69000E068C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C4BCCF5629DECFAB0024431A /* LRChoosePhotoView */,
 				C46A7CCA2848AD4800017E8C /* LRCountDownButton */,
 				C46A7CD5284F352400017E8C /* LRMarginLabel */,
 				C44BE93927E5FA1F001D480C /* LRAlignmentLabel */,
@@ -363,6 +376,7 @@
 		C4B4B4462795AF4B00A736AE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C4BCCF5729DED0350024431A /* LRChoosePhotoHelper */,
 				C415777929DBFA7A0030D1BD /* LRWebViewController */,
 				C454EDE6296AC8BC00207A91 /* LRConstraint */,
 				C44BE8B227D9FA8D001D480C /* EnvironmentChangeHelper */,
@@ -378,6 +392,28 @@
 				C4B4B4492795AFA500A736AE /* LRDeviceHelper.m */,
 			);
 			path = LRDeviceHelper;
+			sourceTree = "<group>";
+		};
+		C4BCCF5629DECFAB0024431A /* LRChoosePhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				C4BCCF5829DED2F90024431A /* LRChoosePhotoView.h */,
+				C4BCCF5929DED2F90024431A /* LRChoosePhotoView.m */,
+			);
+			path = LRChoosePhotoView;
+			sourceTree = "<group>";
+		};
+		C4BCCF5729DED0350024431A /* LRChoosePhotoHelper */ = {
+			isa = PBXGroup;
+			children = (
+				C4BCCF5E29DED6ED0024431A /* LRChoosePhotoHelper.h */,
+				C4BCCF5F29DED6ED0024431A /* LRChoosePhotoHelper.m */,
+				C4BCCF5C29DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.h */,
+				C4BCCF6029DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m */,
+				C4BCCF5D29DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.h */,
+				C4BCCF5B29DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m */,
+			);
+			path = LRChoosePhotoHelper;
 			sourceTree = "<group>";
 		};
 		C4C8CB3D2786E49B00AFE643 /* TitleCollectionView */ = {
@@ -762,7 +798,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BCCF6329DED6ED0024431A /* LRChoosePhotoHelper+AlbumSource.m in Sources */,
 				C4C8CB4F278D1C2800AFE643 /* UINavigationController+Utility.m in Sources */,
+				C4BCCF5A29DED2F90024431A /* LRChoosePhotoView.m in Sources */,
 				C405050226B9252D0087898E /* UIScreen+Utility.m in Sources */,
 				C48292BF272FF3060001A522 /* UIColor+Utility.m in Sources */,
 				C46A7CCD2848ADC000017E8C /* LRCountDownButton.m in Sources */,
@@ -772,6 +810,8 @@
 				C4CD4C6D26A91F8400F7DF43 /* LRMainViewController.m in Sources */,
 				C4C8CB4927884E6F00AFE643 /* LRBaseNavigationController.m in Sources */,
 				C454EDE9296AC8FC00207A91 /* LRConstraint.m in Sources */,
+				C4BCCF6129DED6ED0024431A /* LRChoosePhotoHelper+CameraSource.m in Sources */,
+				C4BCCF6229DED6ED0024431A /* LRChoosePhotoHelper.m in Sources */,
 				C46A7CD4284E07F700017E8C /* UITextField+Utility.m in Sources */,
 				C4907A5127508594000E068C /* NSString+Utility.m in Sources */,
 				C4907A4A274F950E000E068C /* UIFont+Utility.m in Sources */,
